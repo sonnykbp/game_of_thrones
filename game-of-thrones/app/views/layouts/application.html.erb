@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Of Thrones</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <h1>Game of Thrones</h1>
+  <nav>
+    <ul>
+      <li><%= link_to "The Great Houses", houses_path %></li>
+      <li><%= link_to "Add New House", new_house_path %></li>
+    </ul>
+  </nav>
+
+  
+  <%= yield %>
+</body>
+</html>
