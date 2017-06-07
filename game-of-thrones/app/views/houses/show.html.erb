@@ -3,3 +3,13 @@
 <h4>Motto: <%= @house.motto %></h4>
 <h4>Kingdom: <%= @house.kingdom %></h4>
 <img src="<%= @house.crest_url %>">
+
+<h3>House Members</h3>
+<% @house.characters.each do |character| %>
+  <p>Name: <%= character.name %></p>
+  <p>Age: <%= character.age %></p>
+  <img src="<%= character.image_url %>">
+<%end%>
+
+<%= link_to "Edit House", edit_house_path(@house) %>
+<%= link_to "Delete House", house_path(@house), :method => :delete %>

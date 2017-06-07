@@ -1,6 +1,6 @@
 <% @houses.each do |house| %>
   <div class="houses">
-  <p><%= house.name %></p>
+  <a href="/houses/<%=house.id%>"><p><%= house.name %></p></a>
   <a href="/houses/<%=house.id%>"><img src="<%= house.crest_url %>"></a>
 </div>
 <%end%>
