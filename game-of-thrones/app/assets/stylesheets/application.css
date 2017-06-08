@@ -19,9 +19,98 @@
  }
 
 
+
 body {
   font-family: "thrones";
-  background-image: url('http://3.bp.blogspot.com/_jFM-Fd8NDFE/TSdREFTCLmI/AAAAAAAAMU4/yBIfw34XAEM/s1600/Etched1.jpg');
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/a2/b1/61/a2b161b936b429c81c415f34e3583628.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 20px 0;
+}
+.house_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.houses {
+  padding: 20px;
+}
+
+.characters_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.characters {
+  padding: 20px;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin: 10px;
+}
+
+nav li a {
+    color: white;
+}
+
+nav li a:hover {
+    color: white;
+    text-decoration: line-through;
+}
+
+
+
+a{
+text-decoration: none;
+color: black;
+}
+
+.links {
+  background: yellow;
+  height: 50px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links li {
+  display: inline;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.char_img{
+  height: 300px;
+  border-radius: 100%;
+}
+
+.form {
+  padding: 50px;
 }

@@ -1,6 +1,6 @@
 class HousesController < ApplicationController
   def index
-    @houses = House.all
+    @houses = House.all.order('id ASC')
   end
 
   def show
@@ -24,14 +24,14 @@ class HousesController < ApplicationController
   def update
     @house = House.find(params[:id])
     @house.update(house_params)
-    redirect_to house_path(@house), notice: "You updated the house."
+    redirect_to house_path(@house), notice: "You updated #{@house.name}."
 
   end
 
   def destroy
     @house = House.find(params[:id])
     @house.destroy
-    redirect_to houses_path, notice: "You deleted the house."
+    redirect_to houses_path, notice: "You deleted #{@house.name}."
 
   end
 

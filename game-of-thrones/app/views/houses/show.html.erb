@@ -1,15 +1,32 @@
 
+<div class="links">
+  <ul>
+<li><%= link_to "Edit House", edit_house_path(@house) %></li>
+<li><%= link_to "Delete House", house_path(@house), :method => :delete %></li>
+<li><%= link_to "Add House Member", new_house_character_path(@house) %></li>
+  </ul>
+</div>
+
+<div class="flashes">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+
+<div class="house">
 <h3><%= @house.name %></h3>
 <h4>Motto: <%= @house.motto %></h4>
 <h4>Kingdom: <%= @house.kingdom %></h4>
 <img src="<%= @house.crest_url %>">
+</div>
+
+
 
 <h3>House Members</h3>
+<div class="characters_wrapper">
 <% @house.characters.each do |character| %>
-  <p>Name: <%= link_to character.name, house_character_path(@house, character) %></p>
-  <img src="<%= character.image_url %>">
+<div class="characters">
+  <p><%= link_to character.name, house_character_path(@house, character) %></p>
+  <img class="char_img" src="<%= character.image_url %>">
+</div>
 <%end%>
-
-<%= link_to "Edit House", edit_house_path(@house) %>
-<%= link_to "Delete House", house_path(@house), :method => :delete %>
-<%= link_to "Add House Member", new_house_character_path(@house) %>
+</div>

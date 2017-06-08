@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
 
   def index
-    @characters = Character.all
+    @characters = Character.all.order('name ASC')
   end
 
   def show
@@ -17,7 +17,7 @@ class CharactersController < ApplicationController
   def create
     @house = House.find(params[:house_id])
     @character = @house.characters.create(character_params)
-    redirect_to house_path(@house), notice: "You made a new character."
+    redirect_to house_path(@house), notice: "You added a new member."
   end
 
   def edit
@@ -28,13 +28,13 @@ class CharactersController < ApplicationController
   def update
     @character = Character.find(params[:id])
     @character.update(character_params)
-    redirect_to house_character_path(@character), notice: "You updated the character."
+    redirect_to house_character_path(@character), notice: "You updated #{@character.name}."
   end
 
   def destroy
     @character = Character.find(params[:id])
     @character.destroy
-    redirect_to house_path(@character.house_id), notice: "You killed #{@character.name}."
+    redirect_to house_path(@character.house_id), alert: "You killed #{@character.name}!"
 
   end
 

@@ -1,8 +1,20 @@
+<div class="links">
+  <ul>
+<li><%= link_to "Edit character", edit_house_character_path(@character.house_id, @character) %></li>
+<li><%= link_to "Delete character", house_character_path(@character), :method => :delete %></li>
+  </ul>
+</div>
 
-  <h2>Name: <%= @character.name %></h2>
+<div class="flashes">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+
+
+  <div class="characters">
+    <h2><%= @character.name %></h2>
+    <p><%= @character.house.name %></p>
   <p>Age: <%= @character.age %></p>
-  <p><%= @character.house.name %></p>
-  <img src="<%= @character.image_url %>">
 
-<%= link_to "Edit character", edit_house_character_path(@character.house_id, @character) %>
-<%= link_to "Delete character", house_character_path(@character), :method => :delete %>
+  <img class="char_img" src="<%= @character.image_url %>">
+</div>
