@@ -6,10 +6,10 @@
 
 <h3>House Members</h3>
 <% @house.characters.each do |character| %>
-  <p>Name: <%= character.name %></p>
-  <p>Age: <%= character.age %></p>
+  <p>Name: <%= link_to character.name, house_character_path(@house, character) %></p>
   <img src="<%= character.image_url %>">
 <%end%>
 
 <%= link_to "Edit House", edit_house_path(@house) %>
 <%= link_to "Delete House", house_path(@house), :method => :delete %>
+<%= link_to "Add House Member", new_house_character_path(@house) %>

@@ -1,0 +1,8 @@
+
+  <h2>Name: <%= @character.name %></h2>
+  <p>Age: <%= @character.age %></p>
+  <p><%= @character.house.name %></p>
+  <img src="<%= @character.image_url %>">
+
+<%= link_to "Edit character", edit_house_character_path(@character.house_id, @character) %>
+<%= link_to "Delete character", house_character_path(@character), :method => :delete %>

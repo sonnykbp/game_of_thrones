@@ -15,15 +15,13 @@
  */
  @font-face {
    font-family: "thrones";
-   src: url('../fonts/game_of_thrones.ttf') format("truetype");
+   src: url('game_of_thrones.ttf') format("truetype");
  }
 
-  /* assets/fonts */
-  @font-face {
-    font-family: "thrones";
-    src: font-url('../fonts/game_of_thrones.ttf') format("truetype");
-  }
 
 body {
   font-family: "thrones";
+  background-image: url('http://3.bp.blogspot.com/_jFM-Fd8NDFE/TSdREFTCLmI/AAAAAAAAMU4/yBIfw34XAEM/s1600/Etched1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

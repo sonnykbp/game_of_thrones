@@ -1,0 +1,8 @@
+<h2>All Characters</h2>
+
+<% @characters.each do |character| %>
+  <p>Name: <%= character.name %></p>
+  <p>Age: <%= character.age %></p>
+  <p><%= character.house.name %></p>
+  <img src="<%= character.image_url %>">
+<%end%>
